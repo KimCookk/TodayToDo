@@ -11,7 +11,7 @@ import RxSwift
 
 @objc protocol BaseViewControllerCustomizable{
     @objc optional func setupViews()
-    @objc optional func setupBindgs()
+    @objc optional func setupBinds()
 }
 
 class BaseViewController: UIViewController , BaseViewControllerCustomizable {
@@ -24,10 +24,9 @@ class BaseViewController: UIViewController , BaseViewControllerCustomizable {
     }
     
     func _setupViews() {
-        view.backgroundColor = .darkGray
         (self as BaseViewControllerCustomizable).setupViews?()
     }
     func _setupBinds() {
-        (self as BaseViewControllerCustomizable).setupBindgs?()
+        (self as BaseViewControllerCustomizable).setupBinds?()
     }
 }

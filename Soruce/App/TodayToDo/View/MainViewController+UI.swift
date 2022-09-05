@@ -7,7 +7,6 @@
 
 import UIKit
 extension MainViewController{
-    
     func setupViews() {
         print("MainViewController setupViews")
     }
