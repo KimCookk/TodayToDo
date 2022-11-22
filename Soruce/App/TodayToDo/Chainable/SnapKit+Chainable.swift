@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 extension Chain where Origin: UIView{
+    @discardableResult
     func constraint(_ maker: @escaping (ConstraintMaker) -> Void) -> Chain{
 //        if let _ = origin.superview{
 //            origin.snp.makeConstraints(maker)

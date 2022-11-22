@@ -23,9 +23,39 @@ extension Chain where Origin: UILabel{
         return self
     }
     
+    func sizeToFit() -> Chain{
+        origin.sizeToFit()
+        return self
+    }
+    
     func font(size: CGFloat , weight: UIFont.Weight) -> Chain{
         return font(UIFont.systemFont(ofSize: size, weight: weight))
     }
     
+    
+    @discardableResult
+    func text(text: String) -> Chain{
+        origin.text = text
+        return self
+    }
+    
+    func text(attributeText: NSAttributedString) -> Chain{
+        origin.attributedText = attributeText
+        return self
+    }
+    
+    
+    @discardableResult
+    func font(font: UIFont, color: UIColor) -> Chain{
+        origin.font = font
+        origin.textColor = color
+        return self
+    }
+    
+    @discardableResult
+    func textAligment(align: NSTextAlignment) -> Chain{
+        origin.textAlignment = align
+        return self
+    }
     
 }

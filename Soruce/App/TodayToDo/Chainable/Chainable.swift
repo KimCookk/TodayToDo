@@ -23,6 +23,10 @@ class Chain<Origin> {
     init(origin: Origin){
         self.origin = origin
     }
+    
+    func close(){
+        
+    }
 }
 
 protocol Chainable {
